@@ -1,1 +1,1 @@
-import { db_name } from "../constant";
+import { db_name } from "../constant.js";
