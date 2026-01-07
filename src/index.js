@@ -1,9 +1,10 @@
 import { app } from "./app.js";
+import { connectDB } from "./db/db.js";
 
-app.get("/", (req, res) => {
-  res.status(200).send({ success: true });
-});
+const PORT = process.env.PORT || 8000;
 
-app.listen(3000, () => {
-  console.log(`Server is running on port http://localhost:3000`);
+connectDB().then(() => {
+  app.listen(PORT, () => {
+    console.log(`Server is running on port http://localhost:${PORT}`);
+  });
 });
