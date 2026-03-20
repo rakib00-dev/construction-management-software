@@ -1,1 +1,3 @@
-function name(params) {}
+async function CreatUser(req, res) {
+  return "";
+}
